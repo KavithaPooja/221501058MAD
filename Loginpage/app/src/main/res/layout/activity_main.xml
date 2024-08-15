@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@drawable/gradient_background">
+
+    <ImageView
+        android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:src="@drawable/ic_profile"
+    android:contentDescription="@string/profile_icon" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="221501058"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#181A17"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/white"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="26dp"
+        android:background="@drawable/edittext_border"
+        android:hint="Username"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_border"
+        android:textSize="26dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="10dp" />
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/button_color"
+        android:text="Login"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/footer_text"
+        android:layout_width="112dp"
+        android:layout_height="61dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="18dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="Sitka Small Semibold"
+        android:text="BY Kavitha T"
+        android:textColor="@color/white"
+        android:textSize="26sp" />
+
+
+</LinearLayout>

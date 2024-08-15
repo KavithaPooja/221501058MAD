@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">YourAppName</string>
+    <string name="profile_icon">Profile Icon</string>
+    <!-- Add other string resources here -->
+</resources>

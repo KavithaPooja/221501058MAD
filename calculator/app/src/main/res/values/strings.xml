@@ -1,0 +1,7 @@
+<!-- res/values/attrs.xml -->
+<resources>
+    <!-- Define custom attributes here -->
+    <attr name="colorBackground" format="color"/>
+    <attr name="colorOnSurface" format="color"/>
+    <!-- Add other custom attributes if needed -->
+</resources>

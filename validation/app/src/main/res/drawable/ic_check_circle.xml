@@ -1,0 +1,4 @@
+<!--  Example drawable resource (ic_check_circle.xml)  -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="24dp" android:height="24dp" android:viewportWidth="24" android:viewportHeight="24">
+    <path android:fillColor="#FFFFFF" android:pathData="M12,21.35L6.65,16H8.25L12,19.15L15.75,15H17.35L12,21.35Z"/>
+</vector>
