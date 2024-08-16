@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Student Database App</string>
+    <string name="enter_roll_number">Enter Roll Number:</string>
+    <string name="fetch_student_details">Fetch Student Details</string>
+    <string name="no_student_found">No student found with roll number %1$s</string>
+    <string name="error_retrieving_data">Error retrieving data: %1$s</string>
+    <string name="unexpected_error">An unexpected error occurred: %1$s</string>
+</resources>
