@@ -27,7 +27,7 @@ Implementation Considerations Technical Setup To implement TTS and STT in the ap
 
 Installation Clone this repository:
 
-https://github.com/akash8974/MOBILE-APPLICATION-DEVELOPMENT-LAB
+https://github.com/KavithaPooja/221501058MAD.git
 
 bash Copy code git clone Navigate to the project directory:
 
