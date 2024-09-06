@@ -1,5 +1,6 @@
 # 221501058MOBILE APPLICATION DEVELOPMENT-LAB
-Project Overview
+Project Overview:
+
 This project comprises several experiments that explore various facets of mobile app development. Each experiment focuses on key functionalities such as a secure login system, dynamic font customization, a basic calculator, and credential verification techniques. All features are modular and can be seamlessly integrated into other projects.
 
 Features
