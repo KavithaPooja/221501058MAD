@@ -1,48 +1,59 @@
 # 221501058MOBILE APPLICATION DEVELOPMENT-LAB
-Project Overview:
 
-This project comprises several experiments that explore various facets of mobile app development. Each experiment focuses on key functionalities such as a secure login system, dynamic font customization, a basic calculator, and credential verification techniques. All features are modular and can be seamlessly integrated into other projects.
+Android Installation and Setup:
 
-Features
-Secure Login System:
-This login system prioritizes security and includes the following:
+Step 1: Install Android Studio
 
-Credential Validation: Ensures users enter valid usernames and passwords.
-Error Handling: Provides clear feedback for incorrect login attempts.
-Session Management: Manages user sessions securely. How it works: Users log in with a username and password. If valid, they are redirected to the main app screen. If incorrect, an error message is shown.
-Dynamic Font Customization
-This feature allows users to personalize font styles and sizes in the app.
+Download Android Studio from the official website: Android Studio Download.
+Follow the installation instructions for your operating system (Windows, macOS, or Linux).
+Once installed, open Android Studio and configure the SDK (Software Development Kit) based on your development preferences.
+Ensure you have the necessary Android Virtual Device (AVD) or connect a physical Android device for testing.
 
-Predefined Font Styles: Offers a variety of popular fonts to choose from.
-Adjustable Font Sizes: Users can modify font size as per their preferences.
-Instant Preview: Font changes are shown in real-time. How it works: Access the "Font Settings" from the settings menu and select your desired font style and size.
-Calculator:
-A simple yet effective calculator with basic arithmetic operations.
+Step 2: Create a New Android Project
 
-Supported Operations: Addition, subtraction, multiplication, and division.
-User-Friendly Interface: Designed for simplicity and ease of use. How it works: Open the calculator from the main menu, input numbers, and perform calculations.
-Database Connection
-Enabling database operations starts with establishing a secure connection.
+Open Android Studio and select "New Project".
+Choose "Empty View Activity" and click Next.
+Enter your Application Name (e.g., "LoginApp") and ensure the language is set to Java.
+Check the SDK version to ensure it is compatible with your development environment.
+Click Finish to create the project.
 
-Configuration: Specify connection parameters, including the database type, server address, database name, username, and password. How it works: Select the appropriate database driver (e.g., MySQL, SQLite), configure connection parameters, and connect.
-Credential Verification
-Enhances login security through various verification methods.
+Step 3: Access Project Files
 
-Email Verification: Sends a verification link to the user's email during registration.
-Two-Factor Authentication (2FA): Optional for added security.
-Password Strength Checker: Encourages strong passwords. How it works: Users must verify their email address. 2FA can be activated from the security settings.
-Text-to-Speech (TTS) & Speech-to-Text (STT)
-TTS and STT technologies improve accessibility by converting text to speech and vice versa.
+Once the project is created, Android Studio will open the project structure.
+Navigate to the following files:
+activity_main.xml: Located in the res/layout folder, this file defines the UI layout for the login screen.
+MainActivity.java: Located in the java folder, this file handles the logic for the login process.
+Modify these files as needed to implement the login system.
 
-TTS: Converts text to natural-sounding speech, ideal for users who prefer audio-based information or have reading difficulties.
-Use cases: Auditory feedback, reading notifications, or navigation in text-heavy areas.
-STT: Converts spoken language into written text, enabling voice commands and transcription.
-Use cases: Dictating messages, live transcriptions, or hands-free navigation.
-Implementation Considerations:
+Experiment 1:Login App
+This experiment focuses on creating a login app with the following key features:
 
-API Selection: Choose an appropriate TTS/STT API (e.g., Google Cloud, Microsoft Azure).
-Error Handling: Implement error management for unrecognized speech or API failures.
-User Experience: Design the interface to be intuitive and user-friendly.
+Key Features:
+Credential Validation:
+Ensures the correct username and password are entered.
+Passwords are masked and validated (e.g., required minimum length, special characters).
+
+Error Handling:
+Provides clear feedback for incorrect login attempts (e.g., "Invalid Username or Password").
+Limits the number of failed attempts and locks the account temporarily after several invalid attempts.
+
+Session Management:
+Manages user sessions with secure tokens, allowing persistent login until the session expires or the user logs out.
+
+Password Security:
+Passwords are hashed before storage to ensure security.
+
+Account Lockout:
+Temporarily locks the account after multiple failed login attempts.
+
+Password Recovery:
+A "Forgot Password" option allows users to reset their password via email.
+
+How It Works:
+Users log in with a username and password.
+If credentials are correct, the user is redirected to the main app screen.
+If incorrect, an error message is displayed, and after multiple failed attempts, the account is temporarily locked.
+Users can recover their account by resetting their password through the Forgot Password feature.
 
 Installation Clone this repository:
 
