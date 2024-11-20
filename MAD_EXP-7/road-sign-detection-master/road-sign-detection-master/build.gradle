@@ -1,0 +1,76 @@
+project.buildDir = 'gradleBuild'
+getProject().setBuildDir('gradleBuild')
+
+project.ext.ASSET_DIR = projectDir.toString() + '/assets'
+
+if (!file(project.ext.ASSET_DIR + "/graph.pb").exists()) {
+    throw new GradleException("TensorFlow graph file missing!")
+}
+if (!file(project.ext.ASSET_DIR + "/labels.txt").exists()) {
+    throw new GradleException("Labels file missing!")
+}
+
+buildscript {
+    repositories {
+        google() // Updated for newer plugin support
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.0.0' // Updated Gradle plugin version
+    }
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 34 // Use the latest SDK version
+    defaultConfig {
+        applicationId "org.tensorflow.demo"
+        minSdkVersion 21 // Update for better device support
+        targetSdkVersion 34 // Align with the compile SDK
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildToolsVersion '34.0.0' // Updated build tools version
+
+    lintOptions {
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            java.srcDir 'src'
+            manifest.srcFile 'AndroidManifest.xml'
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = [project.ext.ASSET_DIR]
+        }
+    }
+
+    buildTypes {
+        debug {
+            isMinifyEnabled = false
+        }
+        release {
+            isMinifyEnabled = true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation 'org.tensorflow:tensorflow-lite:2.12.0' // Updated TensorFlow library
+    implementation 'com.android.support:appcompat-v7:28.0.0' // Updated AppCompat library
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0' // Updated CircleImageView
+    implementation 'com.couchbase.lite:couchbase-lite-android:3.0.0' // Updated Couchbase Lite
+}
+
+repositories {
+    google()
+    mavenCentral()
+}
